@@ -93,3 +93,13 @@
   display: flex;
   flex-direction: column;
 }
+
+.sidebar__titles {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sidebar__sub__titles {
+  font-size: 0.8rem;
+  font-weight: 400;
+}

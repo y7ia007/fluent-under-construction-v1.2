@@ -20,10 +20,10 @@ function ChannelsSidebar() {
             </div>
             <div className="username__group">
                 <div className="name__user">
-                    <h3>Abdullah Musfer Al-Talidi</h3>
+                    <h3 className="sidebar__titles">Abdullah Musfer Al-Talidi</h3>
                 </div>
                 <div className="is__creator">
-                    <h5>Creator</h5>
+                    <h5 className="sidebar__sub__titles">Creator</h5>
                 </div>
             </div>
         </div>
