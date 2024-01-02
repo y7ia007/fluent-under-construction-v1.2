@@ -190,24 +190,28 @@
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
-  :hover {
-    background-color: var(--Secondary-Background, #F3F8FF);
-    width: 100%;
-  }
+  
 }
 
 .sidebar__card__active {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
+  height: 50px;
+  width: 100%;
+  padding: 0px 22px;
+  align-items: center;
+  gap: 12px;
   border-left: 1px solid var(--primary);
   background: var(--Secondary-Background, #F3F8FF);
+  h5 {
+    font-size: 12px;
+    font-weight: 400;
+    }
   }
 
 .sidebar__card_item{
   display: flex;
   height: 50px;
+  width: 100%;
   padding: 0px 22px;
   align-items: center;
   gap: 12px;
@@ -215,4 +219,8 @@
     font-size: 12px;
     font-weight: 400;
   }
+}
+
+.sidebar__card_item:hover {
+  background-color: var(--Secondary-Background, #F3F8FF);
 }

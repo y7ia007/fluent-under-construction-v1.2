@@ -20,8 +20,8 @@ function ChannelsSidebar() {
                         Conversations
                     </div>
                 </div>
-                <div className="sidebar__card__active">
-                    <div className="sidebar__card_item">
+                <div className="sidebar__card">
+                    <div className="sidebar__card__active">
                         <div className="icon__item">
                             <Dialog className="Dialog" />
                         </div>
@@ -29,8 +29,6 @@ function ChannelsSidebar() {
                             Your Conversations
                         </h5>
                     </div>
-                </div>
-                <div className="sidebar__card">
                     <div className="sidebar__card_item">
                         <div className="icon__item">
                             <Unassigned className="Unassigned" />
@@ -39,8 +37,6 @@ function ChannelsSidebar() {
                             Unassigned
                         </h5>
                     </div>
-                </div>
-                <div className="sidebar__card">
                     <div className="sidebar__card_item">
                         <div className="icon__item">
                             <Dialog className="Dialog" />
@@ -49,8 +45,6 @@ function ChannelsSidebar() {
                             All Conversation
                         </h5>
                     </div>
-                </div>
-                <div className="sidebar__card">
                     <div className="sidebar__card_item">
                         <div className="icon__item">
                             <Mentions className="Mentions" />
@@ -59,8 +53,6 @@ function ChannelsSidebar() {
                             Mentions
                         </h5>
                     </div>
-                </div>
-                <div className="sidebar__card">
                     <div className="sidebar__card_item">
                         <div className="icon__item">
                             <Approvals className="Approvals" />
@@ -70,6 +62,9 @@ function ChannelsSidebar() {
                         </h5>
                     </div>
                 </div>
+                    
+                
+                
             </div>:null}
                 <div className="collabse__icon__item" onClick={()=>setShow(!show)}><Collabes className="Collabes" /></div>
         </>
