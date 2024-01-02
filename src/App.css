@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
+    height: 65px;
     :hover {
       background-color: var(--primary-op10);
       border-radius: 150px;
@@ -49,13 +49,6 @@
       width: 20px;
       height: 20px;
     }
-  }
-}
-
-.main__logo {
-  svg{
-    width: 40px;
-    height: 40px;
   }
 }
 
@@ -102,4 +95,109 @@
 .sidebar__sub__titles {
   font-size: 0.8rem;
   font-weight: 400;
+}
+
+/* Your existing styles */
+.main__sidebar {
+  /* ... */
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  top: 30%; /* Adjust as needed */
+  left: 60px; /* Fixed value for the left space */
+  background-color: #333;
+  color: #fff;
+  padding: 8px; /* Adjust as needed */
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px; /* Adjust as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px; /* Half of the height of the arrow */
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #333 transparent transparent;
+}
+
+.channels__sidebar {
+  width: 12.5rem;
+  border-right: 1px solid var(--stroke);
+  flex-direction: column;
+}
+
+.sidebar__header {
+  flex-direction: row;
+  justify-content: space-between;
+  color: #000000;
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.sidebar__header__title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.collabse__icon__item {
+  position: relative;
+  top: 22px;
+    left: -29px;
+    background-color: white;
+    border-radius: 55px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.07));
+}
+
+.sidebar__card__header{
+
+}
+
+.sidebar__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  :hover {
+    background-color: var(--Secondary-Background, #F3F8FF);
+    width: 100%;
+  }
+}
+
+.sidebar__card__active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-left: 1px solid var(--primary);
+  background: var(--Secondary-Background, #F3F8FF);
+  }
+
+.sidebar__card_item{
+  display: flex;
+  height: 50px;
+  padding: 0px 22px;
+  align-items: center;
+  gap: 12px;
+  h5 {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }

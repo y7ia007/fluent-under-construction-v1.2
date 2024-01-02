@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.07a4befd.css",
+    "main.js": "/static/js/main.8a53acf0.js",
+    "static/media/ticket-icon.svg": "/static/media/ticket-icon.324363684044aa6c5c4ad5a5ffd0348c.svg",
+    "static/media/create-new.svg": "/static/media/create-new.58fed80e9780419a712496ee3979cecf.svg",
+    "static/media/help-center-icon.svg": "/static/media/help-center-icon.fd58532c60f0dd7c30e564e336aee310.svg",
+    "static/media/Logo.svg": "/static/media/Logo.1332b6ab9dae020a6a2e3dec472ad1ee.svg",
+    "static/media/conversations.svg": "/static/media/conversations.b135e4b1dcf88febdd3372f6ef85dee4.svg",
+    "static/media/contact-icon.svg": "/static/media/contact-icon.e1264538bb19ae1c2048d091b91d574d.svg",
+    "index.html": "/index.html",
+    "static/media/chev-down.svg": "/static/media/chev-down.0ad5d8c0fb262b897d853e08792f66f0.svg",
+    "static/media/chevron-right.svg": "/static/media/chevron-right.ac3f05eb966fd8ab29608bcb5e07b40a.svg",
+    "static/media/performance-icon.svg": "/static/media/performance-icon.f728b454d655841d49092665d3aa88d7.svg",
+    "main.07a4befd.css.map": "/static/css/main.07a4befd.css.map",
+    "main.8a53acf0.js.map": "/static/js/main.8a53acf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07a4befd.css",
+    "static/js/main.8a53acf0.js"
+  ]
+}
