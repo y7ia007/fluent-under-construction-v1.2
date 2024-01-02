@@ -8,6 +8,9 @@ import { ReactComponent as Contacts } from "../images/contact-icon.svg";
 import { ReactComponent as Help } from "../images/help-center-icon.svg";
 import { ReactComponent as Performance } from "../images/performance-icon.svg";
 import { ReactComponent as Create } from "../images/create-new.svg";
+import { ReactComponent as Dark } from "../images/Light.svg";
+import { ReactComponent as Notfications } from "../images/Notfications.svg";
+import { ReactComponent as Settings } from "../images/Settings.svg";
 import TooltipComponent from './TooltipComponent';
 
 
@@ -17,6 +20,9 @@ function MainSidebar() {
     const contactsLabel = "Contacts";
     const helpCenterLabel = "Help Center";
     const performanceLabel = "Performance";
+    const settingsLabel = "Settings";
+    const notificationsLabel = "Notfications";
+    const darkLabel = "Dark Mode";
 
 return (
     <div className="main__sidebar">
@@ -68,9 +74,26 @@ return (
         </div>
 
         <div className="botom">
-            <div className="icon__item">
-            <img src={require('../images/Settings.png')} alt="settings"/>
-            </div>
+                <TooltipComponent label={notificationsLabel}>
+                    <div className="icon__item">
+                        <Notfications className="Notfications"/>
+                    </div>    
+                </TooltipComponent>
+                <TooltipComponent label={darkLabel}>
+                    <div className="icon__item">
+                        <Dark className="Dark"/>
+                    </div>    
+                </TooltipComponent>
+                <Link to="/Settings">
+                <TooltipComponent label={settingsLabel}>
+                    <div className="icon__item">
+                        <Settings className="Settings"/>
+                    </div>    
+                </TooltipComponent>
+                </Link>
+                <div className="user__avatar">
+                    <img src={require("../images/avatar.jpg")} alt="user avatar"/>
+                </div>
         </div>
         </div>
     );

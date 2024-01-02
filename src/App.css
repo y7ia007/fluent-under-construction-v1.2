@@ -38,17 +38,32 @@
     :hover {
       background-color: var(--primary-op10);
       border-radius: 150px;
-      /* stroke: var(--primary); */
     }
   }
 }
 
 .botom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   .icon__item{
-    img{
-      width: 20px;
-      height: 20px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+  }
+  :hover {
+    background-color: var(--primary-op10);
+    border-radius: 150px;
+  }
+}
+
+.user__avatar {
+  width: 45px;
+  img {
+    width: 45px;
+    border-radius: 55px;
   }
 }
 
