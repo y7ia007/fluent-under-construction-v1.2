@@ -6,6 +6,9 @@ import { ReactComponent as Dialog } from "../images/Dialog-icon.svg";
 import { ReactComponent as Unassigned } from "../images/Inbox.svg";
 import { ReactComponent as Mentions } from "../images/mentions-icons.svg";
 import { ReactComponent as Approvals } from "../images/approvals-icons.svg";
+import ListContainer from "./channelsSidebarComponents/ListContainer";
+import ListItem from "./channelsSidebarComponents/ListItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ChannelsSidebar() {
 
@@ -62,9 +65,26 @@ function ChannelsSidebar() {
                         </h5>
                     </div>
                 </div>
-                    
-                
-                
+                <div>
+                    <ListContainer headerTitle="Inboxes" />
+                        <ListItem icon={(<img src={require("../images/x-icon.png")} alt="x"/>)} text="Twitter" badge="5"/>
+                        <ListItem icon={(<img src={require("../images/facebook.png")} alt="facebook"/>)} text="Facebook" badge="155"/>
+                        <ListItem icon={(<img src={require("../images/instagram.png")} alt="instagram"/>)} text="Instagram" />
+                        <ListItem icon={(<img src={require("../images/watsapp.png")} alt="Whatsapp"/>)} text="Whatsapp" badge="10"/>
+                        <ListItem icon={(<img src={require("../images/mail.png")} alt="Mail"/>)} text="Mail"/>
+                </div>                           
+                <div>
+                    <ListContainer headerTitle="Teams" />
+                        <ListItem text="Arabic Team" badge="25"/>
+                        <ListItem text="English only Team"/>
+                        <ListItem text="Arabic and English" />
+                </div>                           
+                <div>
+                    <ListContainer headerTitle="Smart Folder" />
+                        <ListItem text="SLA Warring" badge="⚠️"/>
+                        <ListItem text="SLA Missed" badge="🔥️"/>
+                        <ListItem text="All Open" badge="🔥️"/>
+                </div>                           
             </div>:null}
                 <div className="collabse__icon__item" onClick={()=>setShow(!show)}><Collabes className="Collabes" /></div>
         </>

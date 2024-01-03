@@ -149,7 +149,16 @@
   width: 12.5rem;
   border-right: 1px solid var(--stroke);
   flex-direction: column;
+  overflow-y: scroll;
+  height: 100vh;
 }
+
+/* //hide scroll bar ugly sticke // */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 
 .sidebar__header {
   flex-direction: row;
@@ -197,14 +206,14 @@
   display: flex;
   height: 50px;
   width: 100%;
-  padding: 0px 22px;
+  padding: 0px 18px;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   border-left: 1px solid var(--primary);
   background: var(--Secondary-Background, #F3F8FF);
   h5 {
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     }
   }
 
@@ -212,12 +221,12 @@
   display: flex;
   height: 50px;
   width: 100%;
-  padding: 0px 22px;
+  padding: 0px 18px;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   h5 {
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
