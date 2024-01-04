@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './messagesContainer.css';
+import './replyBoxContainer.css';
 
-function MessagesContainer() {
+function ReplyBoxContainer() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
 
@@ -38,4 +38,4 @@ function MessagesContainer() {
   );
 }
 
-export default MessagesContainer;
+export default ReplyBoxContainer;

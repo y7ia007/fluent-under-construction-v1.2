@@ -1,0 +1,22 @@
+:root {
+    --primary: #3460FB;
+    --gray-background:#F8F9FA;
+    --stroke: #F1F3F5;
+    --primary-op10: #E1E7FF;
+    --gray-600: #6B7280;
+    --secondary-bg: #F3F8FF;
+    --red: #F3451E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.midsidebar__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--secondary-bg);
+}
