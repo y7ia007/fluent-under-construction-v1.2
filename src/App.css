@@ -44,6 +44,15 @@
     }
   }
 }
+.icon__item.active {
+  background-color: var(--primary);
+  border-radius: 150px;
+  svg {
+    fill: white;
+  }
+  
+}
+
 
 .botom {
   display: flex;

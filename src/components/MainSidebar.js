@@ -1,6 +1,6 @@
 // MainSidebar.js
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from "../images/Logo.svg";
 import { ReactComponent as Conversations } from "../images/conversations.svg";
 import { ReactComponent as Tickets } from "../images/ticket-icon.svg";
@@ -30,13 +30,12 @@ return (
             <div className="main__logo">
                 <Logo className="logo"/>
             </div>
-            <Link to="/">
-                <TooltipComponent label={conversationsLabel }>
-                    <div className="icon__item">
-                        <Conversations className="Conversations" />
-                    </div>
+            <NavLink to="/" className="icon__item" activeClassName="active">
+                <TooltipComponent label={conversationsLabel}>
+                    <Conversations className="Conversations" />
                 </TooltipComponent>
-            </Link>
+            </NavLink>
+
             <Link to="/Tickets">
                 <TooltipComponent label={ticketsLabel}>
                     <div className="icon__item">
