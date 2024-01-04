@@ -8,7 +8,6 @@ import { ReactComponent as Mentions } from "../images/mentions-icons.svg";
 import { ReactComponent as Approvals } from "../images/approvals-icons.svg";
 import ListContainer from "./channelsSidebarComponents/ListContainer";
 import ListItem from "./channelsSidebarComponents/ListItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ChannelsSidebar() {
 

@@ -1,0 +1,260 @@
+:root {
+    --primary: #3460FB;
+    --gray-background:#F8F9FA;
+    --stroke: #F1F3F5;
+    --primary-op10: #E1E7FF;
+    --gray-600: #6B7280;
+    --secondary-bg: #F3F8FF;
+    --red: #F3451E;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar__tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+  height: 55px;
+  align-items: center;
+  padding: 0px 18px;
+}
+
+.tab {
+  gap: 5px;
+  height: 55px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  padding: 5px;
+}
+
+.messages__container {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+
+.messages__sidebar {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  border-right: 3px solid var(--stroke);
+}
+
+.search__bar {
+  height: 70px;
+  border-bottom: 1px solid var(--stroke);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--stroke);
+  height: 135px;
+  padding: 20px 18px 6px 18px;
+  gap: 12px;
+  align-items: center;
+}
+
+.message-item.clicked {
+  background-color: #F0F8FF; /* Change the background color when clicked */
+  border-left: 3px solid var(--primary);
+}
+
+.message-item:hover {
+  background-color: var(--secondary-bg);
+}
+
+.image__checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 26px;
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 55px;
+  }
+}
+
+.content__preview p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 350px;
+  font-size: 14px;
+  padding-bottom: 8px;
+  font-family: 'Readex Pro';
+  font-weight: 200;
+}
+
+.user-details {
+  h2 {
+    font-family: 'Readex Pro';
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray-600);
+  }
+}
+.incomming__channel {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.message__data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 7px;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-background);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 55px;
+  min-width: 20px;
+  height: 20px;
+  padding: 4px;
+}
+
+.sla__watching__agent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watching {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4E3FF;
+  padding: 2px 5px;
+  border-radius: 55px;
+  p {
+    margin-left: -8px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
+
+.avatar__group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  img {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border-radius: 55px;
+    border: 1px solid #ffffff;
+    object-fit: cover;
+  }
+  img:nth-child(2) {
+    left: -6px;
+  }
+  img:nth-child(3) {
+    left: -12px;
+  }
+}
+
+.sla {
+  font-size: 12px;
+  color: var(--gray-600);
+}
+
+.unclaimed {
+  height: 60px;
+  padding: 10px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--gray-background);
+  border-top: 1px solid var(--stroke);
+}
+
+.title__unclimed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.number__unclaimed {
+  padding: 5px;
+  border-radius: 55px;
+  color: var(--primary);
+  background-color: var(--primary-op10);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.waiting__time {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-direction: row;
+  p {
+    font-size: 14px;
+    color: var(--gray-600);
+    font-weight: 400;
+  }
+}
+
+.red__dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--red);
+  border-radius: 55px;
+}
+
+.secondary__button  {
+  cursor: pointer;
+  padding: 10px 25px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--gray-background);
+  border: 1px solid var(--primary);
+}
