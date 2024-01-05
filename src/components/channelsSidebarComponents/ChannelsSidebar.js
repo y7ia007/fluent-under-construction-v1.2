@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import '../App.css';
-import { ReactComponent as Collabes } from "../images/collabes-icons.svg";
-import { ReactComponent as Dialog } from "../images/Dialog-icon.svg";
-import { ReactComponent as Unassigned } from "../images/Inbox.svg";
-import { ReactComponent as Mentions } from "../images/mentions-icons.svg";
-import { ReactComponent as Approvals } from "../images/approvals-icons.svg";
-import ListContainer from "./channelsSidebarComponents/ListContainer";
-import ListItem from "./channelsSidebarComponents/ListItem";
+import '../../App.css';
+import { ReactComponent as Collabes } from "../../images/collabes-icons.svg";
+import { ReactComponent as Dialog } from "../../images/Dialog-icon.svg";
+import { ReactComponent as Unassigned } from "../../images/Inbox.svg";
+import { ReactComponent as Mentions } from "../../images/mentions-icons.svg";
+import { ReactComponent as Approvals } from "../../images/approvals-icons.svg";
+import ListContainer from "./ListContainer";
+import ListItem from "./ListItem";
 
 function ChannelsSidebar() {
 
@@ -66,11 +66,11 @@ function ChannelsSidebar() {
                 </div>
                 <div>
                     <ListContainer headerTitle="Inboxes" />
-                        <ListItem icon={(<img src={require("../images/x-icon.png")} alt="x"/>)} text="Twitter" badge="5"/>
-                        <ListItem icon={(<img src={require("../images/facebook.png")} alt="facebook"/>)} text="Facebook" badge="155"/>
-                        <ListItem icon={(<img src={require("../images/instagram.png")} alt="instagram"/>)} text="Instagram" />
-                        <ListItem icon={(<img src={require("../images/watsapp.png")} alt="Whatsapp"/>)} text="Whatsapp" badge="10"/>
-                        <ListItem icon={(<img src={require("../images/mail.png")} alt="Mail"/>)} text="Mail"/>
+                        <ListItem icon={(<img src={require("../../images/x-icon.png")} alt="x"/>)} text="Twitter" badge="5"/>
+                        <ListItem icon={(<img src={require("../../images/facebook.png")} alt="facebook"/>)} text="Facebook" badge="155"/>
+                        <ListItem icon={(<img src={require("../../images/instagram.png")} alt="instagram"/>)} text="Instagram" />
+                        <ListItem icon={(<img src={require("../../images/watsapp.png")} alt="Whatsapp"/>)} text="Whatsapp" badge="10"/>
+                        <ListItem icon={(<img src={require("../../images/mail.png")} alt="Mail"/>)} text="Mail"/>
                 </div>                           
                 <div>
                     <ListContainer headerTitle="Teams" />
@@ -85,7 +85,9 @@ function ChannelsSidebar() {
                         <ListItem text="All Open" badge="🔥️"/>
                 </div>                           
             </div>:null}
-                <div className="collabse__icon__item" onClick={()=>setShow(!show)}><Collabes className="Collabes" /></div>
+                <div className="collabse__icon__item" onClick={()=>setShow(!show)}>
+                    <Collabes className="Collabes" />
+                </div>
         </>
     )
 }

@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import MainSidebar from '../components/MainSidebar';
+
 
 
 const Tickets = () => {
   return (
-    <div>
-      <h1>Tickets</h1>
+    <div className='main'>
+      <MainSidebar />
+      
     </div>
   )
 }

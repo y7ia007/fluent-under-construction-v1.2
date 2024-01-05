@@ -1,8 +1,11 @@
 import React from 'react'
+import MainSidebar from '../components/MainSidebar'
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
+    <div className='main'>
+      <MainSidebar />
+    </div>
   )
 }
 

@@ -3,17 +3,34 @@ import './messagesSidebar.css';
 import MessagePreview from './MessagePreview';
 
 const MessagesSidebar = () => {
-  const [activeTab, setActiveTab] = useState('mine'); // 'all' is the default tab
+    const [activeTab, setActiveTab] = useState('mine');
+    const [modalVisible, setModalVisible] = useState(false);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
+        const handleTabClick = (tab) => {
+        setActiveTab(tab);
+        };
+    
+        const openModal = () => {
+        setModalVisible(true);
+        };
+    
+        const closeModal = () => {
+        setModalVisible(false);
+        };
 
     return (
         <div className='messages__sidebar'>
             <div className='search__bar'>
-                Searchbar
+                <img src={require("../../images/search_icon.png")} alt="search icon"/>
+                <input placeholder='Search for Conversation' className='search__box' />
+                <button className='fliter__modal' onClick={openModal}>
+                    <img src={require("../../images/filter_icon.png")} alt="search icon"/>
+                </button>
+                <button className='fliter__modal'>
+                    <img src={require("../../images/sort-top.png")} alt="search icon"/>
+                </button>
             </div>
+
             <div className='sidebar__tabs'>
                 <div className={`tab ${activeTab === 'mine' ? 'active' : ''}`} onClick={() => handleTabClick('mine')}>
                 Mine <div className='badge'>5</div>
@@ -173,6 +190,15 @@ const MessagesSidebar = () => {
                     </>
                 )}
             </div>
+            {modalVisible && (
+                <div className='modal-overlay' onClick={closeModal}>
+                    <div className='modal-content' onClick={(e) => e.stopPropagation()}>
+                        <p>Filter</p>
+                        <button onClick={closeModal}>Close</button>
+                    </div>
+                </div>
+            )}
+
             <div className='unclaimed'>
                 <div className='title__unclimed'>
                     <p>Unassigned</p>

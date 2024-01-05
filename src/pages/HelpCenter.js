@@ -1,8 +1,12 @@
 import React from 'react'
+import MainSidebar from '../components/MainSidebar'
 
 const HelpCenter = () => {
   return (
-    <div>HelpCenter</div>
+    <div className='main'>
+      <MainSidebar />
+    </div>
+    
   )
 }
 

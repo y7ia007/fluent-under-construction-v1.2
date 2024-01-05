@@ -3,6 +3,9 @@
   --gray-background:#F8F9FA;
   --stroke: #F1F3F5;
   --primary-op10: #E1E7FF;
+  --gray-600: #6B7280;
+  --secondary-bg: #F3F8FF;
+  --red: #F3451E;
 }
 
 * {
@@ -14,7 +17,6 @@
 .main {
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
   height: 100vh;
 
 }
@@ -32,27 +34,29 @@
 
 .top{
   display: flex;
+  gap: 18px;
   flex-direction: column;
+  svg {
+    fill: var(--gray-600);
+  }
   .icon__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65px;
-    :hover {
-      background-color: var(--primary-op10);
-      border-radius: 150px;
-    }
+    width: 45px;
+  height: 45px;
   }
-}
-.icon__item.active {
-  background-color: var(--primary);
-  border-radius: 150px;
-  svg {
-    fill: white;
-  }
-  
 }
 
+.icon__item.active {
+  background-color: var(--primary-op10);
+  border-radius: 150px;
+  width: 45px;
+  height: 45px;
+  svg {
+    fill: var(--primary);
+  }
+}
 
 .botom {
   display: flex;
@@ -124,11 +128,6 @@
   font-weight: 400;
 }
 
-/* Your existing styles */
-.main__sidebar {
-  /* ... */
-}
-
 .tooltip-container {
   position: relative;
   display: inline-block;
@@ -136,22 +135,23 @@
 
 .tooltip {
   position: absolute;
-  top: 30%; /* Adjust as needed */
-  left: 60px; /* Fixed value for the left space */
+  top: 20%;
+  left: 60px;
   background-color: #333;
   color: #fff;
-  padding: 8px; /* Adjust as needed */
+  padding: 8px;
   border-radius: 4px;
   white-space: nowrap;
-  font-size: 14px; /* Adjust as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .tooltip::before {
   content: '';
   position: absolute;
   top: 50%;
   right: 100%;
-  margin-top: -5px; /* Half of the height of the arrow */
+  margin-top: -5px; 
   border-width: 5px;
   border-style: solid;
   border-color: transparent #333 transparent transparent;
@@ -162,7 +162,6 @@
   border-right: 1px solid var(--stroke);
   flex-direction: column;
   overflow-y: scroll;
-  height: 100vh;
 }
 
 /* //hide scroll bar ugly sticke // */
@@ -176,7 +175,7 @@
   flex-direction: row;
   justify-content: space-between;
   color: #000000;
-  height: 4.375rem;
+  height: 70px;
   display: flex;
   align-items: center;
   padding: 0 22px;
@@ -189,9 +188,9 @@
 }
 
 .collabse__icon__item {
-  position: relative;
+  position: fixed;
   top: 22px;
-    left: -29px;
+    left: 65px;
     background-color: white;
     border-radius: 55px;
     width: 24px;
@@ -200,11 +199,14 @@
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.07));
+    &.floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      /* Add other styles for the floating state as needed */
+  }
 }
 
-.sidebar__card__header{
-
-}
 
 .sidebar__card {
   display: flex;

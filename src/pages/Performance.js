@@ -1,8 +1,9 @@
 import React from 'react'
+import MainSidebar from '../components/MainSidebar'
 
 const Performance = () => {
   return (
-    <div>Performance</div>
+    <div className='main'><MainSidebar /></div>
   )
 }
 
