@@ -19,7 +19,6 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--secondary-bg);
     overflow-y: scroll;
 }
 
@@ -28,6 +27,9 @@
     background: transparent; /* make scrollbar transparent */
 }
 
+.midsidebar__replybox {
+    overflow-y: scroll;
+}
 .midsidebar__header {
     flex-direction: row;
     justify-content: space-between;

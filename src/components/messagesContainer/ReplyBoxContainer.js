@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './replyBoxContainer.css';
 
 function ReplyBoxContainer() {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [textFormat, setTextFormat] = useState('');
+
+  const messagesContainerRef = useRef(null);
 
   const handleInputChange = (e) => {
     setNewMessage(e.target.value);
@@ -14,12 +16,12 @@ function ReplyBoxContainer() {
     const currentTimestamp = new Date().getTime();
     const messageTimestamp = new Date(timestamp).getTime();
     const timeDifference = currentTimestamp - messageTimestamp;
-    
+
     const seconds = Math.floor(timeDifference / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
-    
+
     if (seconds < 60) {
       return `${seconds} sec ago`;
     } else if (minutes < 60) {
@@ -55,7 +57,7 @@ function ReplyBoxContainer() {
   };
 
   useEffect(() => {
-    // You can update the timestamp every minute or as needed
+    // Update the timestamp every minute or as needed
     const interval = setInterval(() => {
       setMessages((prevMessages) => {
         return prevMessages.map((message) => ({
@@ -63,14 +65,21 @@ function ReplyBoxContainer() {
           timeAgo: timeAgo(message.time),
         }));
       });
-    }, 60); // Update every minute
+    }, 60 * 1000); // Update every minute
 
     return () => clearInterval(interval);
   }, [messages]);
 
+  // Scroll to the bottom of the messages container whenever it is updated
+  useEffect(() => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <div className="App">
-      <div className="messages-container">
+      <div className="messages-container" ref={messagesContainerRef}>
         {messages.map((message) => (
           <div key={message.id} className={`message-container ${message.format}`}>
             <div className="message-content">
@@ -98,19 +107,55 @@ function ReplyBoxContainer() {
         ))}
       </div>
       <div className="input-container">
+        <div className='reply__tabs'>
+          <div className='reply__active'>
+            Reply
+          </div>
+          <div className='reply'>
+            Note
+          </div>
+          <div className='reply'>
+            Close
+          </div>
+        </div>
         <input
           type="text"
           value={newMessage}
           onChange={handleInputChange}
-          placeholder="Type your message..."
+          placeholder="Write your reply here ... start with / to use canned responce"
         />
-      </div>
-      <div className="send-container">
-        <button onClick={handleSendClick}>Send</button>
+        <div className="send-container">
+          <div className='reply__options'>
+            <div className="item">
+              <img src={require("../../images/A.png")} alt="text format" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/emote-smile.png")} alt="emoji" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/image-1.png")} alt="Image Attachement" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/gif.png")} alt="GIF" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/microphone.png")} alt="send voice" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/attachment.png")} alt="attachment" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/list-pointers.png")} alt="list" />
+            </div>
+            <div className="item">
+              <img src={require("../../images/AI.png")} alt="AI" />
+            </div>
+          </div>
+          <button className='primary__button' onClick={handleSendClick}>Send</button>
+        </div>
       </div>
     </div>
   );
-  
 }
 
 export default ReplyBoxContainer;
